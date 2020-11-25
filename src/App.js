@@ -30,7 +30,7 @@ class App extends React.Component {
 
           {/* <Route path="/reservation" exact component={Reservations} /> */}
           <Route path="/reservation" exact render={(props) => (
-<Reservations header="Reservations HEADER!" {...props}/>
+          <Reservations header="Reservations HEADER!" {...props}/>
           )}
 />
           <Route path="/details/:stefano" component={DishDetails} />
