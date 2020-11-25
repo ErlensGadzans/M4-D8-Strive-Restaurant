@@ -1,9 +1,10 @@
 import React from "react";
-import { Row, Col, Image, Badge } from "react-bootstrap";
+import { Alert, Row, Col, Image, Badge } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-const SingleDish = (props) => (
-  <>
+const SingleDish = (props) => {
+      if (props.dish) {
+        return (
     <Row>
       <Col md={8} className="ml-auto mr-auto">
         <Row>
@@ -26,7 +27,9 @@ const SingleDish = (props) => (
         </Row>
       </Col>
     </Row>
-  </>
 )
-
+        } else {
+          return <Alert variant="danger">There is not dish like this!</Alert>
+        }
+      };
 export default SingleDish;
