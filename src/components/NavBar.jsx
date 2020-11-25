@@ -15,6 +15,11 @@ const NavBar = (props) => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ml-auto">
+            <Link>
+           {props.location.pathname === "/details/0" && (
+                <div className="nav-link">My Favourite Dish</div>
+              )}
+              </Link>
             <Link to="/menu">
               <div className={props.location.pathname === '/menu' ? 'nav-link active' : 'nav-link'}>Menu</div>
             </Link>
